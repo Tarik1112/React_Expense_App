@@ -1,18 +1,16 @@
 import "./Item.css";
 import ItemDate from "./ItemDate";
-function Item() {
-  const date = new Date("16 September 2021");
-  const itemName = "Neckless";
-  const itemPrice = 200;
+function Item(props) {
+
 
   return (
     <div className="item">
-      <ItemDate date={date}></ItemDate>
+      <ItemDate date={props.date}></ItemDate>
       <div className="item-description">
-        <h3>{itemName}</h3>
+        <h3>{props.title}</h3>
 
         <div className="item-price">
-          <span>${itemPrice}</span>
+          <span>${props.amount}</span>
         </div>
       </div>
     </div>
