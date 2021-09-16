@@ -1,23 +1,22 @@
-import './Item.css'
+import "./Item.css";
+import ItemDate from "./ItemDate";
+function Item() {
+  const date = new Date("16 September 2021");
+  const itemName = "Neckless";
+  const itemPrice = 200;
 
-function Item(){
-
-return (
+  return (
     <div className="item">
-        <div className="item-date">
-            <span>October 18th 2021</span>
-        </div>
-        <div className="item-description">
-            <div className="item-name">
-                <h3>Neckless</h3>
-            </div>
-            <div className="item-price">
-                <span>$200</span>
-            </div>
-        </div>
-    </div>
-);
+      <ItemDate date={date}></ItemDate>
+      <div className="item-description">
+        <h3>{itemName}</h3>
 
+        <div className="item-price">
+          <span>${itemPrice}</span>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Item
+export default Item;
