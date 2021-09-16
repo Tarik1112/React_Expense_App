@@ -1,10 +1,11 @@
 import "./Item.css";
 import ItemDate from "./ItemDate";
+import Card from "./UI/Card"
 function Item(props) {
 
 
   return (
-    <div className="item">
+    <Card className="item">
       <ItemDate date={props.date}></ItemDate>
       <div className="item-description">
         <h3>{props.title}</h3>
@@ -13,7 +14,7 @@ function Item(props) {
           <span>${props.amount}</span>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
 
