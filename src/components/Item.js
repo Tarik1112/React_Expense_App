@@ -2,7 +2,9 @@ import "./Item.css";
 import ItemDate from "./ItemDate";
 import Card from "./UI/Card"
 function Item(props) {
-
+  const dumMethod = () =>{
+    console.log('Hello');
+  }
 
   return (
     <Card className="item">
@@ -14,6 +16,7 @@ function Item(props) {
           <span>${props.amount}</span>
         </div>
       </div>
+      <button onClick={dumMethod}> Click me! </button>
     </Card>
   );
 }
