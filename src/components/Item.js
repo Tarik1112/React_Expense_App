@@ -16,7 +16,7 @@ function Item(props) {
     <Card className="item">
       <ItemDate date={props.date}></ItemDate>
       <div className="item-description">
-        <h3>props.title</h3>
+        <h3>{props.title}</h3>
 
         <div className="item-price">
           <span>${props.amount}</span>
